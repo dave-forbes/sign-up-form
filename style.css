@@ -2,6 +2,7 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
+  background-color: black;
 }
 
 #grid-container {
@@ -9,6 +10,7 @@ body {
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 2fr;
+  background-color: white;
 }
 
 .grid-item {
@@ -18,4 +20,10 @@ body {
 .grid-item:first-child {
   grid-row-start: 1;
   grid-row-end: 4;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
