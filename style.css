@@ -13,13 +13,21 @@ body {
   background-color: white;
 }
 
-.grid-item {
-  border: 1px solid black;
-}
-
 .grid-item:first-child {
   grid-row-start: 1;
   grid-row-end: 4;
+}
+
+.grid-item:nth-child(2),
+.grid-item:nth-child(4) {
+  background-color: rgb(250, 255, 255);
+}
+
+.grid-item:nth-child(3) {
+  z-index: 2;
+  -webkit-box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
 img {
