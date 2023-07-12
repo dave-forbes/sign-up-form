@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#grid-container {
+  width: 70vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.grid-item {
+  border: 1px solid black;
+}
+
+.grid-item:first-child {
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
