@@ -24,7 +24,7 @@ function checkPasswordSame() {
   }
 }
 
-password.addEventListener('focusout', checkPassword);
+password.addEventListener('change', checkPassword);
 
 function checkPassword() {
   if (password.value.length < 8) {
@@ -35,7 +35,7 @@ function checkPassword() {
   checkPasswordSame();
 }
 
-phone.addEventListener('focusout', checkPhone);
+phone.addEventListener('change', checkPhone);
 
 function checkPhone() {
   if ((/\W/g).test(phone.value) || phone.value.length < 11) {
@@ -45,7 +45,7 @@ function checkPhone() {
   }
 }
 
-email.addEventListener('focusout', checkEmail);
+email.addEventListener('change', checkEmail);
 
 function checkEmail() {
   const regex = /(.+)@(.+)\.(.+)/g
@@ -56,7 +56,7 @@ function checkEmail() {
   }
 }
 
-firstName.addEventListener('focusout', checkFirstName);
+firstName.addEventListener('change', checkFirstName);
 
 function checkFirstName() {
   if (firstName.value == '') {
@@ -66,7 +66,7 @@ function checkFirstName() {
   }
 }
 
-lastName.addEventListener('focusout', checkLastName)
+lastName.addEventListener('change', checkLastName)
 
 function checkLastName() {
   if (lastName.value == '') {
