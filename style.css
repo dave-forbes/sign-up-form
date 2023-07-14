@@ -7,8 +7,6 @@
 body {
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
   background-color: white;
 }
 
@@ -134,7 +132,7 @@ input:focus {
 
 #banner>h1 {
   color: black;
-  font-size: 2vw;
+  font-size: 1.7rem;
 }
 
 #banner>img {
@@ -152,16 +150,104 @@ input:focus {
   font-size: 0.8rem;
 }
 
-div.success-overlay {
-  height: 100vh;
+h1.success {
   background-color: #fbf0e4;
   display: none;
-  position: absolute;
-  z-index: 9999;
-  right: 0;
-  align-items: center;
+  margin: 0;
+  font-size: 1.8rem;
 }
 
-div.success-overlay h1 {
-  margin-left: 5rem;
+@media only screen and (max-width: 900px) {
+
+  #grid-container {
+    grid-template-columns: 1fr;
+    background-color: white;
+  }
+
+  .grid-item {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid-item:first-child {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    position: relative;
+    height: 100vh;
+  }
+
+  .grid-item:nth-child(2),
+  .grid-item:nth-child(3),
+  .grid-item:nth-child(4) {
+    padding: 50px 0;
+  }
+
+  .grid-item:nth-child(2) {
+    text-align: center;
+  }
+
+  h2 {
+    margin: 30px 10px;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-item:nth-child(4) {
+    text-align: center;
+    width: 100vw;
+  }
+
+  .scroll {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    animation: down 1.5s infinite;
+    -webkit-animation: down 1.5s infinite;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: 18px;
+      width: 18px;
+      height: 18px;
+      border-left: 2px solid #ffffff;
+      border-bottom: 2px solid #ffffff;
+      transform: rotate(-45deg);
+    }
+  }
+
+  @keyframes down {
+    0% {
+      transform: translate(0);
+    }
+
+    20% {
+      transform: translateY(15px);
+    }
+
+    40% {
+      transform: translate(0);
+    }
+  }
+
+  @-webkit-keyframes down {
+    0% {
+      transform: translate(0);
+    }
+
+    20% {
+      transform: translateY(15px);
+    }
+
+    40% {
+      transform: translate(0);
+    }
+  }
 }
