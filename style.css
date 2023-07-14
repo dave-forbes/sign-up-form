@@ -68,7 +68,7 @@ form {
   width: 70%;
 }
 
-form>p {
+form>div {
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -139,4 +139,15 @@ input:focus {
 
 #banner>img {
   width: 5rem;
+}
+
+.error-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.error-flex p {
+  margin: 0;
+  color: red;
+  font-size: 0.8rem;
 }
