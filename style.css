@@ -151,3 +151,17 @@ input:focus {
   color: red;
   font-size: 0.8rem;
 }
+
+div.success-overlay {
+  height: 100vh;
+  background-color: #fbf0e4;
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  right: 0;
+  align-items: center;
+}
+
+div.success-overlay h1 {
+  margin-left: 5rem;
+}
