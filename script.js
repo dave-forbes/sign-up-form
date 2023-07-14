@@ -10,7 +10,7 @@ const firstName = document.querySelector('#first-name');
 const firstNameError = document.querySelector('p.first-name-error');
 const lastName = document.querySelector('#last-name');
 const lastNameError = document.querySelector('p.last-name-error');
-const successOverlay = document.querySelector('div.success-overlay');
+const success = document.querySelector('h1.success');
 const gridItem2 = document.querySelector('.grid-item:nth-child(2)');
 const submit = document.querySelector('button');
 
@@ -28,18 +28,17 @@ password.addEventListener('change', checkPassword);
 
 function checkPassword() {
   if (password.value.length < 8) {
-    passwordError.textContent = '*please enter 8 or more characters';
+    passwordError.textContent = '*password must be at least 8 characters long';
   } else {
     passwordError.textContent = '';
   }
-  checkPasswordSame();
 }
 
 phone.addEventListener('change', checkPhone);
 
 function checkPhone() {
   if ((/\W/g).test(phone.value) || phone.value.length < 11) {
-    phoneError.textContent = '*please enter a valid phone number';
+    phoneError.textContent = '*please enter a valid uk phone number';
   } else {
     phoneError.textContent = '';
   }
@@ -86,7 +85,6 @@ function checkForm() {
   checkPhone();
   let arr = [firstNameError, lastNameError, emailError, phoneError, passwordError, confirmError];
   if (arr.every(item => item.textContent == '')) {
-    successOverlay.style.cssText = `width: ${gridItem2.clientWidth}px;`
-    successOverlay.style.display = 'flex';
+    success.style.display = 'block';
   }
 }
